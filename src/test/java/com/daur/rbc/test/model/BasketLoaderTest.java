@@ -22,11 +22,6 @@ public class BasketLoaderTest {
 
     private final BasketLoader underTest = new BasketLoader();
 
-    @Before
-    public void setUp() throws Exception {
-        reset(itemCatalog);
-    }
-
     @Test
     public void load_whenInsertedInvalidCount_thenRepeatQuestion() throws Exception {
         PrintStream printStream = mock(PrintStream.class);

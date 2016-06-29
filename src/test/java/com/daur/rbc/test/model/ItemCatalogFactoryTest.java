@@ -89,6 +89,6 @@ public class ItemCatalogFactoryTest {
 
         ItemCatalog actual = underTest.create(new String[]{catalogFile.getAbsolutePath()});
 
-        //assertThat(actual).includes(entry("banana", "1.2"), entry("apple", "1.0"));
+        assertThat(actual.getItems()).containsOnly(Item.of("banana", 1.2), Item.of("apple", 1.0));
     }
 }
